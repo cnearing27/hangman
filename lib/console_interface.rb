@@ -30,13 +30,7 @@ class ConsoleInterface
 
   def word_to_show
     result =
-      @game.letters_to_guess.map do |letter|
-        if letter == nil
-          "__"
-        else
-          letter
-        end
-      end
+      @game.letters_to_guess.map { |letter| (letter.nil? ? "__" : letter) }
 
     result.join(" ")
   end

@@ -30,10 +30,8 @@ class Game
   def letters_to_guess
     result =
       @letters.map do |letter|
-        if @user_guesses.include?(normalize(letter)) || @user_guesses.include?(letter)
+        if @user_guesses.include?(normalize(letter))
           letter
-        else
-          nil
         end
       end
     result
@@ -48,8 +46,8 @@ class Game
   end
 
   def play!(letter)
-    if !over? && !@user_guesses.include?(letter)
-      @user_guesses << letter
+    if !over? && !@user_guesses.include?(normalize(letter))
+      @user_guesses << normalize(letter)
     end
   end
 
