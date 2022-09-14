@@ -6,8 +6,8 @@
 Установите bundler и необходимые библиотеки, используя команды
 
 ```
-    gem install bundler
-    bundle install
+gem install bundler
+bundle install
 ```
 
 Затем запустите игру
